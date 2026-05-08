@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Desafio OBT — Listagem de Projetos Espaciais
 
 Aplicação web para listagem e visualização de projetos espaciais internacionais, com busca por nome e paginação.
@@ -44,3 +45,6 @@ http://localhost:5173
 - Busca por nome do projeto
 - Paginação
 - Tela de detalhes ao clicar em um projeto
+=======
+# Projeto_RepescagemOBT
+>>>>>>> edf34666f22ddbb03f987ec74fa1e26112b02fbc
