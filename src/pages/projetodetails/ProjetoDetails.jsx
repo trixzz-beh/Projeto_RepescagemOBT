@@ -1,4 +1,4 @@
-import { Button, Divider, Image, Switch} from '@mantine/core';
+import { Button, Divider, Image, ScrollArea, Switch} from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { useState } from 'react';
 import Header from '../../components/Header';
@@ -25,6 +25,7 @@ const ProjetoDetails = (props) => {
                         fallbackSrc="./src/assets/projetos/erroImage.jpg"
                         loading='lazy'
                         fit='fill'
+                        height={600}
                     />
                 </section>
 
@@ -48,23 +49,26 @@ const ProjetoDetails = (props) => {
                             label={checked ? "Ativo" : "Inativo"}
                         />
                     </section>
+                   
+                        <ScrollArea>
+                             <div style={{height: 500}}>
+                                 <Divider className="projeto-details__divider"/>
+                                    <h2>Descrição</h2>
+                                    {props.descricao && props.descricao.length > 0 ?
+                                        <p>{props.descricao}</p> :
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, a in. Ratione sint expedita dolore a, molestiae eum natus voluptatum distinctio beatae assumenda, delectus maxime, optio pariatur! Sed, error explicabo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit pariatur quas numquam, unde incidunt enim doloremque cum id, soluta aliquid harum voluptas distinctio. Sit odit amet unde, obcaecati natus officia!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi hic quibusdam officia, autem ad officiis vero odit dignissimos molestias necessitatibus quia dicta repellendus sed amet, dolorum voluptatum tempore esse cumque!</p>
+                                    }
+                                 <ul>
+                                    {props.topicos.map((topico, index) => (
+                                    <li key={index}>{topico}</li>
+                                    ))}
+                                </ul>
+                        
+                             </div>
+                              
+                        </ScrollArea>
 
-                    <section>
-                        <Divider className="projeto-details__divider"/>
-                        <h2>Descrição</h2>
-                        {props.descricao && props.descricao.length > 0 ?
-                            <p>{props.descricao}</p> :
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, a in. Ratione sint expedita dolore a, molestiae eum natus voluptatum distinctio beatae assumenda, delectus maxime, optio pariatur! Sed, error explicabo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit pariatur quas numquam, unde incidunt enim doloremque cum id, soluta aliquid harum voluptas distinctio. Sit odit amet unde, obcaecati natus officia!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi hic quibusdam officia, autem ad officiis vero odit dignissimos molestias necessitatibus quia dicta repellendus sed amet, dolorum voluptatum tempore esse cumque!</p>
-                        }
-                    </section>
-
-                    {props.passo && (
-                        <section>
-                            <Divider className="projeto-details__divider"/>
-                            <h2>Passo a passo</h2>
-                            {props.passo}
-                        </section>
-                    )}
+                   
                 </section>
             </main>
         </>
