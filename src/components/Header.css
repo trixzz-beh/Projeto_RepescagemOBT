@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #0b1120;
+    border-bottom: 1px solid #1e293b;
+}
+
+.theme-toggle{
+    background: #111827 !important;
+    border: 1px solid #1f2937 !important;
+    color: white !important;
+    transition: 0.25s;
+}
+
+.theme-toggle:hover{
+    border-color: rgba(255,255,255,0.5) !important;
+    transform: translateY(-2px);
+}
+
+.header__input {
+    width: 300px;
+    min-width: 300px;
+}

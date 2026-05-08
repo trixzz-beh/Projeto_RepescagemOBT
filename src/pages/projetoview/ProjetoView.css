@@ -1,0 +1,65 @@
+.projeto-view__grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-color: #020617;
+    animation: fundo 20s linear infinite;
+}
+
+.mantine-TextInput-input{
+    background: #111827 !important;
+    border: 1px solid #1f2937 !important;
+    color: white !important;
+    border-radius: 999px !important;
+    padding: 12px 18px 12px 42px !important;
+}
+.mantine-TextInput-input::placeholder{
+    color: #94a3b8 !important;
+}
+.mantine-TextInput-input:focus{
+    border-color: #edeff2 !important;
+    box-shadow:
+        0 0 0 4px rgba(59,130,246,0.15) !important;
+}
+
+.mantine-Pagination-root{
+    display: flex;
+    justify-content: center;
+}
+
+.mantine-Pagination-control{
+    background: #111827 !important;
+    border: 1px solid #1f2937 !important;
+    color: #e5e7eb !important;
+    border-radius: 14px !important;
+    min-width: 42px;
+    height: 42px;
+    transition: all 0.2s ease;
+}
+
+.mantine-Pagination-control:hover{
+    border-color: rgba(255,255,255,0.55) !important;
+    background: #161f31 !important;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 8px 20px rgba(0,0,0,0.35);
+}
+
+.mantine-Pagination-control[data-active]{
+    background: #e5e7eb !important;
+    color: #0f172a !important;
+    border-color: white !important;
+    font-weight: 600;
+}
+
+@keyframes fundo {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
+}
