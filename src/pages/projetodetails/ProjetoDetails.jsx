@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import './ProjetoDetails.css';
 
 const ProjetoDetails = (props) => {
-    const [checked, setChecked] = useState(props.status);
+    const [checked] = useState(props.status);
     const [load, setLoad] = useState(false);
     return (
         <>
@@ -58,9 +58,18 @@ const ProjetoDetails = (props) => {
                                         <p>{props.descricao}</p> :
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, a in. Ratione sint expedita dolore a, molestiae eum natus voluptatum distinctio beatae assumenda, delectus maxime, optio pariatur! Sed, error explicabo?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit pariatur quas numquam, unde incidunt enim doloremque cum id, soluta aliquid harum voluptas distinctio. Sit odit amet unde, obcaecati natus officia!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi hic quibusdam officia, autem ad officiis vero odit dignissimos molestias necessitatibus quia dicta repellendus sed amet, dolorum voluptatum tempore esse cumque!</p>
                                     }
-                                 <ul>
+                                 <ul className="projeto-details__topicos">
                                     {props.topicos.map((topico, index) => (
-                                    <li key={index}>{topico}</li>
+
+                                    <li className="projeto-details__topico" key={index}>
+                                    <strong>
+                                        {topico.split(':')[0]}:
+                                    </strong>
+
+                                    {topico.includes(':') &&
+                                        ` ${topico.split(':').slice(1).join(':')}`
+                                    }
+                                    </li>
                                     ))}
                                 </ul>
                         

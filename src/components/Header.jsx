@@ -7,18 +7,22 @@ import {
 
 import './Header.css';
 
-const Header = ({onBusca}) => {
+const Header = ({ onBusca }) => {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+
     return (
         <header className="header">
+
             <TextInput
                 placeholder="Pesquisar projetos..."
                 leftSection={<IconSearch size={16} />}
-                onChange={(e) => onBusca && onBusca(e.target.value)}
+                onChange={(event) =>
+                    onBusca?.(event.currentTarget.value)
+                }
                 className="header__input"
             />
 
-             <ActionIcon
+            <ActionIcon
                 onClick={() => toggleColorScheme()}
                 variant="filled"
                 radius="xl"

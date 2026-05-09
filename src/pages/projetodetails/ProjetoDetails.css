@@ -60,9 +60,8 @@
 }
 
 .projeto-details__info-section p{
-    color: #94a3b8;
+    color: #9ca3af;
     line-height: 1.8;
-    font-size: 1rem;
 }
 
 .projeto-details__bandeira{
@@ -84,4 +83,57 @@
 .projeto-details__main:hover{
     box-shadow:
         0 20px 50px rgba(0,0,0,0.45);
+}
+
+.projeto-details__topicos{
+    list-style: none;
+    padding: 0;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.projeto-details__topico{
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+    padding: 16px 18px;
+    color: #d1d5db;
+    line-height: 1.6;
+    transition: 0.25s;
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.18);
+}
+
+.projeto-details__topico:hover{
+    border-color: rgba(255,255,255,0.28);
+    background: #172033;
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.28);
+}
+
+.mantine-ScrollArea-scrollbar{
+    background: transparent;
+}
+
+.mantine-ScrollArea-thumb{
+    background: #374151;
+    border-radius: 999px;
+}
+
+.projeto-details__info-section h2{
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.projeto-details__topico strong{
+    color: white;
+    font-weight: 600;
+}
+
+.projeto-details__topico{
+    white-space: pre-line;
 }
